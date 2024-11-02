@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >  <!-- Couleur de fond pour le ScrollView -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            tools:context=".CreateUserActivity">
+                <!-- Ajouter une ombre pour le CardView -->
+                <LinearLayout
+                    android:layout_width="355dp"
+                    android:layout_height="467dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/titleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/nunito_bold"
+                        android:gravity="center"
+                        android:text="Inscrivez-vous"
+                        android:textColor="@color/blue"
+                        android:textSize="30sp" />  <!-- Changer la couleur du texte -->
+                    <!-- Image centrée -->
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginBottom="20dp"
+                        android:src="@drawable/person"
+                        app:civ_border_color="@color/blue"
+                        app:civ_border_width="2dp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        app:boxBackgroundColor="@android:color/transparent">
+
+                        <EditText
+                            android:id="@+id/signUpEtName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_edittext_background"
+                            android:hint="Enter nom"
+                            android:inputType="textCapWords"
+                            android:maxLength="25"
+                            android:textColorHint="@color/gray" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        app:boxBackgroundColor="@android:color/transparent">
+
+                        <EditText
+                            android:id="@+id/signUpEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_edittext_background"
+                            android:hint="Email"
+                            android:inputType="textEmailAddress"
+                            android:maxLength="25"
+                            android:textColorHint="@color/gray" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        app:boxBackgroundColor="@android:color/transparent">
+
+                        <EditText
+                            android:id="@+id/signUpPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_edittext_background"
+                            android:hint="Enter mot de pass"
+                            android:inputType="textPassword"
+                            android:textColorHint="@color/gray" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/signUpBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Creer"
+                        android:textColor="@color/white"
+                        android:background="@drawable/button_background"
+
+                     />
+
+                </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/signUpTextToSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vous avez déjà un compte ? Connectez-vous"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>
